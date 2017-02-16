@@ -1,3 +1,5 @@
+"""Nicholas Newman"""
+
 # baby_set.py
 
 class BabySet:
@@ -20,7 +22,7 @@ class BabySet:
 		unique to the set."""
 
 		for i in self.__data:
-			if i != elem:
+			if i == elem:
 				return None # found existing value. Exit.
 		
 		self.__data.append(elem)
