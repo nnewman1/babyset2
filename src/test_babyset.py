@@ -30,11 +30,15 @@ def test_get():
     bset = BabySet([2,4,4])
     bset.get(4)
     assert bset.size() == 2
+    with pytest.raises(KeyError):
+        bset.get(5)
 
 def test_remove():
     bset = BabySet([2,4,4])
     bset.remove(2)
     assert bset.size() == 1
+    with pytest.raises(KeyError):
+        bset.get(5)
 
 def test_clear():
     bset = BabySet([2,4,4])
